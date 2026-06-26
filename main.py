@@ -3,12 +3,12 @@ import time
 import requests
 
 # Konfigurasi
-START_ID = 1
-END_ID = 10  # Ubah sesuai keinginan, saat ini koleksi mereka sudah sampai 70,000+
+START_ID = 7684
+END_ID = 75000  
 DOWNLOAD_DIR = "biblios"
-DELAY_SECONDS = 2  # Jeda waktu agar tidak diblokir server
+DELAY_SECONDS = 2  # Jeda waktu
 
-# Membuat folder penyimpanan jika belum ada
+# Membuat folder penyimpanan
 if not os.path.exists(DOWNLOAD_DIR):
     os.makedirs(DOWNLOAD_DIR)
 
@@ -42,7 +42,7 @@ for book_id in range(START_ID, END_ID + 1):
     except requests.exceptions.RequestException as e:
         print(f"Terjadi eror koneksi pada ID {book_id}: {e}")
     
-    # Jeda waktu wajib agar sopan terhadap server
+    # Jeda waktu
     time.sleep(DELAY_SECONDS)
 
 print("\nProses selesai!")
