@@ -16,7 +16,7 @@ print("Memulai pengunduhan buku...\n")
 
 for book_id in range(START_ID, END_ID + 1):
     # Menggunakan URL alternatif teks UTF-8 yang stabil
-    url = f"https://www.gutenberg.org/ebooks/{book_id}.txt.utf-8"
+    url = f"https://www.gutenberg.org/ebooks/{book_id}.epub.noimages"
     filename = os.path.join(DOWNLOAD_DIR, f"book_{book_id}.epub")
     
     print(f"Mencoba mengunduh Buku ID {book_id}...")
